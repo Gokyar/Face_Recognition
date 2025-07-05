@@ -1,2 +1,6 @@
 # Face_Recognition
-Yüz tanıma projesi.
+Bu projemiz yüz tanıma sistemidir. İlk olarak admin girişi ile yüz kaydetme işlemi yapılır. Yüz kaydetme işlemi şu şekilde gerçekleşir:
+İlk olarak kaydedilecek kişinin adı istenir. Daha sonra kamera sayesinde kullanıcının yüz görüntüsü alınır. Alınan görüntüler "faces" klasörüne kaydedilir. Daha sonra bu kaydedilen fotoğrafların embeddings'leri çıkarılarak "embeddings" klasörüne kaydedilir. Görüntüler ve embeddings'ler kullanıcı ismine göre kaydedilir.   
+Kaydetme işleminden sonra doğrulama kısmıda aynı mantıkda ilerler. Kullanıcı kameraya bakarken alınan görüntülerle kullanıcının embedding'leri çıkarılır. Çıkarılan embedding, kaydedilen embedding'ler arasında karşılaştırma sonucuna göre kullanıcının sisteme kayıtlı olup olmadığı değerlendirilir.
+
+"embedding" kavramı: Python’da yüz tanıma sistemlerinde kullanılan embedding kavramı, bir yüz görüntüsünün sayısal ve anlamlı bir temsilidir. Bu temsil genellikle 128 boyutlu bir vektör olup, yüzün karakteristik özelliklerini özetler. Aynı kişiye ait yüzlerin embedding’leri birbirine benzer ve vektör uzayında birbirine yakın olurken, farklı kişilere ait embedding’ler daha uzakta yer alır. Embedding'ler, bir derin öğrenme modeli (örneğin FaceNet, Dlib, ArcFace) tarafından çıkarılır ve yüzleri doğrudan piksel piksel karşılaştırmak yerine bu özet vektörler üzerinden daha verimli ve doğru şekilde karşılaştırma yapılmasını sağlar. Böylece yüz tanıma, doğrulama ve sınıflandırma gibi işlemler kolaylıkla gerçekleştirilir. 
